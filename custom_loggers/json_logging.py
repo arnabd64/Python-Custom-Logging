@@ -6,6 +6,10 @@ from pymongo import MongoClient
 
 
 class JSONFormatter(Formatter):
+    """
+    The `JSONFormatter` transforms a `LogRecord` into a 
+    python dictionary.
+    """
 
     def format(self, record: LogRecord) -> dict:
         return {
